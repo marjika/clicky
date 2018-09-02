@@ -1,0 +1,56 @@
+[
+    {
+      "id": 1,
+      "name": "Meninas",
+      "image": "/images/meninas.jpg"
+
+    },
+    {
+        "id": 2,
+        "name": "Bowler",
+        "image": "/images/bowler.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Earring",
+        "image": "/images/pearlearring.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Socrates",
+        "image": "/images/socrates.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Ermine",
+        "image": "/images/ermine.jpg"
+    },    {
+        "id": 6,
+        "name": "Fifer",
+        "image": "/images/fifer.jpg"
+    },    {
+        "id": 7,
+        "name": "Kiss",
+        "image": "/images/kiss.jpg"
+    },    {
+        "id": 8,
+        "name": "Raphael",
+        "image": "/images/raphael.jpg"
+    },    {
+        "id": 9,
+        "name": "Seurat",
+        "image": "/images/seurat.jpg"
+    },    {
+        "id": 10,
+        "name": "Sistine",
+        "image": "/images/sistine.jpg"
+    },    {
+        "id": 11,
+        "name": "Speech",
+        "image": "/images/speech.jpg"
+    },    {
+        "id": 12,
+        "name": "Ribbon",
+        "image": "/images/ribbon.jpg"
+    }
+]
