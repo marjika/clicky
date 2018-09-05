@@ -3,6 +3,7 @@ import Portrait from "./components/Portrait";
 import Navbar from "./components/Navbar";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
+import Modal from "./components/Modal";
 import images from "./imagearray.json";
 import "./App.css";
 
@@ -25,22 +26,27 @@ class App extends Component {
     idNums : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
     wins: 0,
     losses: 0,
-    score: 0
+    score: 0,
+    outcome: true,
+    show: false
   };
 
-  // removeFriend = id => {
-  //   const friends = this.state.friends.filter(friend => friend.id !== id);
-  //   this.setState({ friends });
-  // }
+  showModal = () => {
+    this.setState({show: !this.state.show});
+  }
+  
   shuffleImages = id => {
     if (this.state.idNums.includes(id)) {
-      console.log("keep going");
       const idNums = this.state.idNums.filter(item => item !== id);
       if (idNums.length<1) {
-        console.log("You win");
+        const score = this.state.score + 1;
+        this.setState({ score });
+        this.setState({outcome: true});
+        this.showModal();
+        setTimeout(()=>this.setState({show: !this.state.show}), 2000);
         const wins = this.state.wins + 1;
         const images = shuffle(initalState);
-        this.setState({ images, wins,  score: 0, idNums: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] });
+        this.setState({ images, wins, score: 0, idNums: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] });
       }
       else {
         this.setState({ idNums });
@@ -49,7 +55,9 @@ class App extends Component {
       }
     }
     else {
-      console.log("you lost");
+      this.setState({ outcome: false});
+      this.showModal();
+      setTimeout(()=>this.setState({show: !this.state.show}), 2000);
       const losses = this.state.losses + 1;
       this.setState({ losses,  score: 0, idNums: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] });
     }
@@ -67,7 +75,9 @@ class App extends Component {
         score={this.state.score}
       />
       <Wrapper>
+       <Modal show={this.state.show} outcome={this.state.outcome}></Modal>
       <Title>Master the Masters</Title>
+      <h5>Don't click the same portrait twice.</h5>
         {this.state.images.map(image => (
           <Portrait
           shuffleImages={this.shuffleImages}
