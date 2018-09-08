@@ -10,9 +10,9 @@
     overflow: auto;
   }
 
-  @media screen and (min-width: 10400px) {
+  @media screen and (min-width: 1200px) {
     .wrapper {
-      padding-left: calc((100% - 1000px)/2);
-      padding-right: calc((100% - 1000px)/2);
+      padding-left: calc((100% - 1200px)/2);
+      padding-right: calc((100% - 1200px)/2);
     }
   } 

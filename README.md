@@ -2,7 +2,7 @@
 
 ### A React Game that allows users to test their memory
 
-This application is a React game, created with the aid of "create-react-app".  Based on the React (component, props, state) structure, the application breaks up the UI into components (Navbar, Title, Wrapper, Portraits (Squares) and Card/Modal), manages component state, and responds to user events.  The application manages game pieces with a .json object which gets shuffled and displayed every time the user clicks an image.   
+This application is a React game, created with the aid of "create-react-app".  Based on the React (components, props, state) structure, the application breaks up the UI into components (Navbar, Title, Wrapper, Portraits (Squares) and Card/Modal), manages component state, and responds to user events.  The application manages game pieces with a .json object which gets shuffled and displayed every time the user clicks an image.   
 
 ![Game start](/public/images/start.JPG)
 
