@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import Modal from "./components/Modal";
+import Footer from "./components/Footer";
 import images from "./imagearray.json";
 import "./App.css";
 
@@ -68,7 +69,7 @@ class App extends Component {
   
   render() {
     return (
-      <div>
+      <div className="appDiv">
       <Navbar 
         wins={this.state.wins}
         losses={this.state.losses}
@@ -77,7 +78,7 @@ class App extends Component {
       <Wrapper>
        <Modal show={this.state.show} outcome={this.state.outcome}></Modal>
       <Title>Master the Masters</Title>
-      <h5>Don't click the same portrait twice.</h5>
+      <h5>Click the portraits by renown artists, but don't click the same portrait twice.</h5>
         {this.state.images.map(image => (
           <Portrait
           shuffleImages={this.shuffleImages}
@@ -89,6 +90,7 @@ class App extends Component {
         />
         ))}
       </Wrapper>
+      <Footer />
       </div>
     );
   }

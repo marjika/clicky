@@ -11,6 +11,4 @@ const Portrait = props => (
   </div>
 );
 
-// Portrait.prototype.clicked =false;
-
 export default Portrait;
